@@ -13,19 +13,12 @@ public class Ball : MonoBehaviour
 	{
 		if(Input.GetKey(KeyCode.LeftArrow))
 		{
-			Rb.AddForce(new Vector2(-MoveForce, 0f));
+			
 		}
 	}
 
 	private void OnCollisionEnter2D(Collision2D collision)
 	{
-		if(collision.gameObject.CompareTag("Wall"))
-		{
-			GetComponent<SpriteRenderer>().color = Color.red;
-		}
-		else if(collision.gameObject.CompareTag("Goal"))
-		{
-			SceneManager.LoadScene(TargetSceneIndex);
-		}
+		
 	}
 }
